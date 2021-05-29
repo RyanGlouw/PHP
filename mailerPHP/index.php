@@ -7,7 +7,7 @@
 </head>
 
 <body>
-        <form method="post" action="action.php" enctype="multipart/form-data">
+        <form method="post" action="action.php" enctype="multipart/form-data">  <!-- enctype нужен если через форму будет отправка файлов -->
             <div class="form-data">
                 <label for="">
                     <input type="text" name="first-name">
