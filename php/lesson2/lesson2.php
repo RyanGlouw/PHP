@@ -59,7 +59,7 @@ $items = [
         'id' => 1,
         'title' => 'Flute',
         'price' => 20000,
-        'img' => 'flute.jpg',
+        'img' => 'squirrel.jpg',
         'description' => [
             'color' => 'white',
             'material' => 'bamboo'
@@ -69,7 +69,7 @@ $items = [
         'id' => 2,
         'title' => 'Guitar',
         'price' => 18000,
-        'img' => 'guitar.jpg',
+        'img' => 'rabbit.jpg',
         'description' => [
             'color' => 'brown',
             'material' => 'linden'
@@ -79,7 +79,7 @@ $items = [
         'id' => 3,
         'title' => 'Drum',
         'price' => 68000,
-        'img' => 'drum.jpg',
+        'img' => 'hedgehog.jpg',
         'description' => [
             'color' => 'brown',
             'material' => 'steel'
@@ -96,10 +96,12 @@ $items = [
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/style.css" rel="stylesheet">
     <title>Товары</title>
 </head>
 <body>
 <section>
+    <div class="container">
     <? foreach ($items as $item): ?>
     <div>
         <h1>Товары</h1>
@@ -108,12 +110,13 @@ $items = [
             <h4>Цена:<?= $item['price']?></h4>
         </div>
         <div>
-            <img src="img" alt="картинка" <?= $item['img']?>>
+            <img height="200px" src="/img/<?= $item['img'] ?>">
         </div>
         <div>
             <h4>Цвет:<?= $item['description']['color']?></h4>
             <h4>Материал:<?= $item['description']['material']?></h4>
         </div>
+    </div>
     </div>
     <? endforeach; ?>
 </section>
