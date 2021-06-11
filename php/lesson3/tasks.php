@@ -42,13 +42,13 @@ function get_all_tasks(){
         ],
         [
             'title'=>'Задача 3',
-            'date'=>date_create(),
+            'date'=>date_create('tomorrow'),
             'participants'=>['Артур', 'Глеб'],
             'closed'=>false
         ],
         [
             'title'=>'Задача 4',
-            'date'=>date_create('yesterday'),
+            'date'=>date_create(),
             'participants'=>['Павел', 'Полина'],
             'closed'=>true
         ]
@@ -60,13 +60,31 @@ function get_all_tasks(){
 // 3.1. новые задачи (Дата задачи > date_create())
 // 3.2. закрытые задачи (со значением closed === true)
 // 3.3. невыполненные задачи (со значением closed === false и датой меньше date_create())
+
 function get_closed_tasks($array){
-    // реализация
+    $result = [];
+    foreach ($array as $task){
+        if($task['date'] > date_create()){
+            $result[] = $task;
+        }
+    }
+    return $result;
 }
+var_dump(get_closed_tasks(get_all_tasks()));
 
 // Задача 4:
 // Написать функцию, которая принимает массив и возвращает новый массив,
 // в который войдут задачи, в которых имя участника равно значению $name:
+
 function get_tasks_by_name($array, $name){
-    // реализация
+    $return_names = [];
+    foreach ($array as $tasks){
+        foreach ($tasks['participants'] as $names){
+            if ($names === $name){
+                $return_names[] = $tasks;
+            }
+        }
+    }
+    return $return_names;
 }
+var_dump(get_tasks_by_name(get_all_tasks(),'Артур'));
