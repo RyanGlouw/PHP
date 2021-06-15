@@ -9,7 +9,7 @@ if (!isset($id)){
 $cake = $cakes[$get['id']-1];
 if (!isset($cake)){
     header("Location: cakes.php");
-}if (gettype($cake) == ){
+}if (gettype($cake) == is_string($cake)){
     header("Location: cakes.php");
 }
 ?>
