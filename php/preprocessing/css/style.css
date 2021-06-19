@@ -1,0 +1,152 @@
+/* css */
+.container {
+  font-size: 30px;
+}
+
+.items {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+.items .item {
+  background-color: orangered;
+  color: white;
+}
+.items .item .item-title, .items .item .item-title {
+  text-align: center;
+}
+.items .item .item-title {
+  color: orangered;
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.items .item .item-price {
+  color: red;
+  background-color: yellow;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.warning, .success, .error, .button {
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.button {
+  background-color: aliceblue;
+}
+
+.error {
+  background-color: red;
+}
+
+.success {
+  background-color: green;
+}
+
+.warning {
+  background-color: turquoise;
+}
+
+.col-1 {
+  flex: 0 0 8.333333%;
+}
+
+.col-2 {
+  flex: 0 0 16.666666%;
+}
+
+.col-3 {
+  flex: 0 0 24.999999%;
+}
+
+.col-4 {
+  flex: 0 0 33.333332%;
+}
+
+.col-5 {
+  flex: 0 0 41.666665%;
+}
+
+.col-6 {
+  flex: 0 0 49.999998%;
+}
+
+.col-7 {
+  flex: 0 0 58.333331%;
+}
+
+.col-8 {
+  flex: 0 0 66.666664%;
+}
+
+.col-9 {
+  flex: 0 0 74.999997%;
+}
+
+.col-10 {
+  flex: 0 0 83.33333%;
+}
+
+.col-11 {
+  flex: 0 0 91.666663%;
+}
+
+.col-12 {
+  flex: 0 0 99.999996%;
+}
+
+@media screen and (max-width: 599px) {
+  .col-1 {
+    flex: 0 0 8.333333%;
+  }
+
+  .col-2 {
+    flex: 0 0 16.666666%;
+  }
+
+  .col-3 {
+    flex: 0 0 24.999999%;
+  }
+
+  .col-4 {
+    flex: 0 0 33.333332%;
+  }
+
+  .col-5 {
+    flex: 0 0 41.666665%;
+  }
+
+  .col-6 {
+    flex: 0 0 49.999998%;
+  }
+
+  .col-7 {
+    flex: 0 0 58.333331%;
+  }
+
+  .col-8 {
+    flex: 0 0 66.666664%;
+  }
+
+  .col-9 {
+    flex: 0 0 74.999997%;
+  }
+
+  .col-10 {
+    flex: 0 0 83.33333%;
+  }
+
+  .col-11 {
+    flex: 0 0 91.666663%;
+  }
+
+  .col-12 {
+    flex: 0 0 99.999996%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

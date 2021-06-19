@@ -1,0 +1,82 @@
+// css
+/* css */
+
+$oranged: orangered;
+$white: white;
+$big-font: 30px;
+
+@mixin some-style($color, $background){
+  color: $color;
+  background-color: $background;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container {
+  font-size: $big-font;
+}
+
+.items {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    background-color: $oranged;
+    color: white;
+
+    .item-title, .item-title {
+      text-align: center;
+    }
+    .item-title {
+      @include some-style($oranged,$white)
+    }
+    .item-price{
+      @include some-style(red,yellow)
+    }
+  }
+}
+
+// наследование
+
+%button { // общие стили
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.button {
+  background-color: aliceblue;
+  @extend %button;
+}
+
+.error{
+  background-color: red;
+  @extend %button;
+}
+
+.success{
+  background-color: green;
+  @extend %button;
+}
+.warning{
+  background-color: turquoise;
+  @extend %button;
+}
+
+@for $i from 1 through 12{
+  .col-#{$i}{
+    flex: 0 0 8.333333% * $i;
+  }
+}
+@media screen and (max-width: 599px){
+  @for $i from 1 through 12{
+    .col-#{$i}{
+      flex: 0 0 8.333333% * $i;
+    }
+  }
+}
+
+// примеси
+
