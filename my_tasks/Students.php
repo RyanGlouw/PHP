@@ -1,19 +1,15 @@
 <?php
 
-	class Arr
-	{
-		// Массив для хранения чисел:
-		private $numbers;
+class User
+{
+    public $surname; // фамилия
+    public $name; // имя
+    public $patronymic; // отчество
 
-		// Добавляет число в набор:
-		public function add($numbers)
-		{
-			$this->numbers[] = $num;
-		}
-
-		// Находит сумму чисел набора:
-		public function getSum()
-		{
-			return array_sum($this->numbers);
-		}
-	}
+    public function __construct($surname, $name, $patronymic)
+    {
+        $this->surname = $surname;
+        $this->name = $name;
+        $this->patronymic = $patronymic;
+    }
+}
