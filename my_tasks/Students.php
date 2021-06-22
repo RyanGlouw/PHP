@@ -1,15 +1,16 @@
 <?php
+class Arr {
+    private $numbers = [];
 
-class User
-{
-    public $surname; // фамилия
-    public $name; // имя
-    public $patronymic; // отчество
-
-    public function __construct($surname, $name, $patronymic)
-    {
-        $this->surname = $surname;
-        $this->name = $name;
-        $this->patronymic = $patronymic;
+    public function add($number){
+        $this->numbers[] = $number;
+        return $this;
+    }
+    public function append(){
+        array_merge($this->numbers);
+    }
+    public function getSum(){
+        return array_sum($this->numbers);
     }
 }
+?>

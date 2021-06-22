@@ -11,13 +11,23 @@ foreach ($images as $key_name => $value) {
 
 }
 
+
+var_dump($value);
+var_dump($item);
+var_dump($normalizeImages[$key]);
+var_dump($normalizeImages[$key][$key_name]);
+
+function typeFile($file, $typeF){
+    !in_array($file['type'], $typeF);
+}
+
 function upload_files($normalizeImages)
 {
     foreach ($normalizeImages as $image) {
         $img = $image;
         $types = ["image/jpeg", "image/png"];
 
-        if (!in_array($image['type'], $types)) {
+        if (typeFile($image,$types)) {
             echo "Файл " . "<b>" . $image['name'] . "</b>" . " не загружен т.к не соответствует расширению. Загрузите JPG или PGN" . "<br>";
         }
         $fileSize = $image["size"] / 1000000;

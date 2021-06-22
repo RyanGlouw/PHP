@@ -1,11 +1,5 @@
 <?php
 require_once 'Students.php';
 
-$user = new User('Иванов', 'Иван', 'Иванович');
-
-$props = ['surname', 'name', 'patronymic'];
-echo $user->{$props[0]}; // выведет 'Иванов'
-echo $user->{$props[1]}; // выведет 'Иванов'
-echo $user->{$props[2]}; // выведет 'Иванов'
-
-
+$arr = new Arr;
+echo $arr->add(1)->append([2, 3, 4])->add(5)->getSum();
