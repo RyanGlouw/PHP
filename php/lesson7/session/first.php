@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); // запускать только в самом верху
 // session_start(['read_and_close'=>true]);
 
 $_SESSION['data'] = 'Данные сессии';
