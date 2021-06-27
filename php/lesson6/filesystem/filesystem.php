@@ -21,3 +21,7 @@ echo $str_from_file;
 $file_name = 'file2.txt';
 $str_from_arr = file($file_name, FILE_SKIP_EMPTY_LINES | FILE_IGNORE_NEW_LINES);
 var_dump($str_from_arr);
+
+
+
+
