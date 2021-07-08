@@ -1,0 +1,15 @@
+{
+    "name": "maxto/lesson13mvc",
+    "autoload": {
+        "psr-4": {
+            "Ifmo\\Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ryantodd",
+            "email": "ryantodd1176@gmail.com"
+        }
+    ],
+    "require": {}
+}
